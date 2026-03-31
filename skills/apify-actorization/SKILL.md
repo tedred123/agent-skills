@@ -76,8 +76,9 @@ Copy this checklist to track progress:
 - [ ] Step 4: Configure `.actor/input_schema.json`
 - [ ] Step 5: Configure `.actor/output_schema.json` (if applicable)
 - [ ] Step 6: Update `.actor/actor.json` metadata
-- [ ] Step 7: Test locally with `apify run`
-- [ ] Step 8: Deploy with `apify push`
+- [ ] Step 7: Write README.md for the Apify Store listing
+- [ ] Step 8: Test locally with `apify run`
+- [ ] Step 9: Deploy with `apify push`
 
 ## Step 1: Analyze the Project
 
@@ -128,7 +129,13 @@ See [schemas-and-output.md](references/schemas-and-output.md) for detailed confi
 
 Validate schemas against `@apify/json_schemas` npm package.
 
-## Step 7: Test Locally
+## Step 7: Write README
+
+**IMPORTANT:** Always generate a README.md as part of actorization. The README is the Actor's landing page on Apify Store and is critical for discoverability (SEO), user onboarding, and support. Do not consider an Actor complete without a proper README.
+
+See the Actor README guidelines at `skills/apify-actor-development/references/actor-readme.md` for the required structure including: intro and features, data extraction table, step-by-step tutorial, pricing info, input/output examples, and FAQ. Aim for at least 300 words with SEO-optimized H2/H3 headings.
+
+## Step 8: Test Locally
 
 Run the actor with inline input (for JS/TS and Python actors):
 
@@ -144,7 +151,7 @@ apify run --input-file ./test-input.json
 
 **Important:** Always use `apify run`, not `npm start` or `python main.py`. The CLI sets up the proper environment and storage.
 
-## Step 8: Deploy
+## Step 9: Deploy
 
 ```bash
 apify push
@@ -189,6 +196,7 @@ Other options: **Rental** (monthly subscription) or **Free** (open source).
 - [ ] Inputs are read via `Actor.getInput()` / `Actor.get_input()`
 - [ ] Outputs use `Actor.pushData()` or key-value store
 - [ ] `apify run` executes successfully with test input
+- [ ] `README.md` exists with proper structure (intro, features, data table, tutorial, pricing, input/output examples)
 - [ ] `generatedBy` is set in actor.json meta section
 
 ## Apify MCP Tools
