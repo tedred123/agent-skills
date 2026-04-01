@@ -76,7 +76,7 @@ Use the appropriate CLI command based on the user's language choice. Additional 
 3. **Implement logic** - Write the actor code in `src/main.py`, `src/main.js`, or `src/main.ts`
 4. **Configure schemas** - Update input/output schemas in `.actor/input_schema.json`, `.actor/output_schema.json`, `.actor/dataset_schema.json`
 5. **Configure platform settings** - Update `.actor/actor.json` with actor metadata (see [references/actor-json.md](references/actor-json.md))
-6. **Write documentation** - Create comprehensive README.md for the marketplace
+6. **Write documentation** - Create comprehensive README.md for the marketplace (see [references/actor-readme.md](references/actor-readme.md) — this is mandatory, not optional)
 7. **Test locally** - Run `apify run` to verify functionality (see Local Testing section below)
 8. **Deploy** - Run `apify push` to deploy the actor on the Apify platform (actor name is defined in `.actor/actor.json`)
 
@@ -199,6 +199,14 @@ See [references/dataset-schema.md](references/dataset-schema.md) for dataset sch
 
 See [references/key-value-store-schema.md](references/key-value-store-schema.md) for key-value store schema structure, collections, and configuration.
 
+## Actor README
+
+**IMPORTANT:** Always generate a README.md as part of Actor development. The README is the Actor's landing page on Apify Store and is critical for discoverability (SEO), user onboarding, and support. Do not consider an Actor complete without a proper README.
+
+See [references/actor-readme.md](references/actor-readme.md) for the required structure, SEO best practices, and content guidelines. Also review these top Actors for best practices:
+
+- [Instagram Scraper](https://apify.com/apify/instagram-scraper)
+- [Google Maps Scraper](https://apify.com/compass/crawler-google-places)
 
 ## Apify MCP Tools
 
