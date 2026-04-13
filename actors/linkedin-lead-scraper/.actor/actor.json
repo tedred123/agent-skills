@@ -1,0 +1,35 @@
+{
+    "actorSpecification": 1,
+    "name": "linkedin-lead-scraper",
+    "title": "LinkedIn Lead Scraper",
+    "description": "Find LinkedIn profiles and companies matching your target criteria for lead generation. Discovers prospects for managed IT services, cloud backup, MDR, and equipment rentals.",
+    "version": "1.0",
+    "generatedBy": "Claude Code with Claude Sonnet 4.6",
+    "dockerfile": "./Dockerfile",
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": {
+            "actorSpecification": 1,
+            "title": "LinkedIn Leads",
+            "views": {
+                "overview": {
+                    "title": "Leads Overview",
+                    "transformation": {
+                        "fields": ["name", "title", "company", "location", "linkedinUrl", "snippet"]
+                    },
+                    "display": {
+                        "component": "table",
+                        "properties": {
+                            "name": { "label": "Name", "format": "text" },
+                            "title": { "label": "Job Title", "format": "text" },
+                            "company": { "label": "Company", "format": "text" },
+                            "location": { "label": "Location", "format": "text" },
+                            "linkedinUrl": { "label": "LinkedIn URL", "format": "link" },
+                            "snippet": { "label": "Snippet", "format": "text" }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

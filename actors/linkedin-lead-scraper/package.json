@@ -1,0 +1,15 @@
+{
+    "name": "linkedin-lead-scraper",
+    "version": "1.0.0",
+    "description": "LinkedIn lead scraper for managed IT services, cloud backup, MDR, and equipment rental prospects",
+    "type": "module",
+    "main": "src/main.js",
+    "scripts": {
+        "start": "node src/main.js"
+    },
+    "dependencies": {
+        "apify": "^3.2.2",
+        "crawlee": "^3.9.0",
+        "playwright": "^1.44.0"
+    }
+}

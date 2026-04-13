@@ -1,0 +1,59 @@
+{
+    "actorSpecification": 1,
+    "title": "LinkedIn Lead Scraper Input",
+    "description": "Configure your LinkedIn lead generation search",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "searchQueries": {
+            "title": "Search Queries",
+            "type": "array",
+            "description": "List of search queries to find leads. Each query targets a specific need (e.g. 'IT manager cloud backup', 'CTO managed IT services').",
+            "editor": "stringList",
+            "default": [
+                "IT manager managed IT services",
+                "CTO cloud backup disaster recovery",
+                "IT director MDR managed detection response",
+                "office manager laptop rental"
+            ],
+            "prefill": [
+                "IT manager managed IT services",
+                "CTO cloud backup disaster recovery"
+            ]
+        },
+        "profileType": {
+            "title": "Profile Type",
+            "type": "string",
+            "description": "Search for individual profiles (people) or company pages.",
+            "editor": "select",
+            "enum": ["people", "companies", "both"],
+            "enumTitles": ["People (profiles)", "Companies (pages)", "Both"],
+            "default": "people"
+        },
+        "location": {
+            "title": "Location Filter",
+            "type": "string",
+            "description": "Optionally restrict results to a city, state, or country (e.g. 'Chicago', 'Texas', 'United States').",
+            "editor": "textfield",
+            "default": ""
+        },
+        "maxResultsPerQuery": {
+            "title": "Max Results Per Query",
+            "type": "integer",
+            "description": "Maximum number of leads to collect per search query. Higher values consume more credits.",
+            "editor": "number",
+            "default": 20,
+            "minimum": 1,
+            "maximum": 100
+        },
+        "proxyConfiguration": {
+            "title": "Proxy Configuration",
+            "type": "object",
+            "description": "Proxy settings to avoid rate limiting. Datacenter proxies are recommended.",
+            "editor": "proxy",
+            "sectionCaption": "Proxy & Anti-blocking",
+            "prefill": { "useApifyProxy": true }
+        }
+    },
+    "required": ["searchQueries"]
+}
